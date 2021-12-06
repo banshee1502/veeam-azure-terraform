@@ -6,7 +6,7 @@ provider "azurerm" {
 
 resource "azurerm_storage_account" "backups" {
   name                     = var.storageaccountname
-  resource_group_name      = module.resource-group.rgprod_name
+  resource_group_name      = var.resource_group_name
   location                 = var.location
   account_tier             = "Standard"
   account_replication_type = var.account_replication_type

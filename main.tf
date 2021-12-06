@@ -29,5 +29,4 @@ module "storage-account" {
  location                 =
  account_replication_type =
  delete_retention_policy  =
-
 }
