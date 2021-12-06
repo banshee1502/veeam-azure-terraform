@@ -30,3 +30,23 @@ module "storage-account" {
  account_replication_type =
  delete_retention_policy  =
 }
+
+module "networking-vnet" {
+ source = "./modules/networking/vnet"
+
+ prodnetwork_name     = 
+ prodnetwork_location = 
+ rg_prodname          = module.resource-group.rgprod_name
+ prodaddress_space    =   
+
+ prodsubnet_name    =
+ prodsubnet_address =
+
+ stagingnetwork_name     =
+ stagingnetwork_location =
+ rg_stagingname          = module.resource-group.rgstaging_name
+ stagingaddress_space    = 
+ 
+ stagingsubnet_name    =
+ stagingsubnet_address = 
+}
