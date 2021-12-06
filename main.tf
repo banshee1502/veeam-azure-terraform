@@ -1,5 +1,3 @@
-# We strongly recommend using the required_providers block to set the
-# Azure Provider source and version being used
 terraform {
   required_providers {
     azurerm = {
@@ -9,18 +7,27 @@ terraform {
   }
 }
 
-# Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
-  subscription_id = var.subscription_id
+
+  subscription_id = 
 }
 
 module "resource-group" {
  source = "./modules/resource-group"
+
+ rgprod_name    =  
+ rgstaging_name =
+ rg_location    =
 }
 
 module "storage-account" {
  source = "./modules/storage-account"
  
- resource_group_name = module.resource-group.rgprod_name
+ resource_group_name      = module.resource-group.rgprod_name
+ storageaccountname       = 
+ location                 =
+ account_replication_type =
+ delete_retention_policy  =
+
 }
