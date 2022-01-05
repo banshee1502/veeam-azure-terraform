@@ -37,16 +37,16 @@ module "networking-vnet" {
  prodnetwork_name     = 
  prodnetwork_location = 
  rg_prodname          = module.resource-group.rgprod_name
- prodaddress_space    =   
+ prodaddress_space    =  ["/24"] 
 
  prodsubnet_name    =
- prodsubnet_address =
+ prodsubnet_address = "/24"
 
  stagingnetwork_name     =
  stagingnetwork_location =
  rg_stagingname          = module.resource-group.rgstaging_name
- stagingaddress_space    = 
+ stagingaddress_space    = ["/24"]
  
  stagingsubnet_name    =
- stagingsubnet_address = 
+ stagingsubnet_address = "/24"
 }
